@@ -16,7 +16,7 @@ public class MenuScreen extends Activity implements OnClickListener {
     Button settingsButton;
     Button clickMeButton;
     Button webButton;
-    Button vejledningButtonTest;
+    Button vejledningButton;
     TextView menuTextView;
 
     @Override
@@ -27,8 +27,8 @@ public class MenuScreen extends Activity implements OnClickListener {
         settingsButton = (Button) findViewById(R.id.settingsButton);
         clickMeButton = (Button) findViewById(R.id.clickMeButton);
         webButton = (Button) findViewById(R.id.webButton);
-        vejledningButtonTest = (Button) findViewById(R.id.vejledningButton);
-        vejledningButtonTest.setOnClickListener(this);
+        vejledningButton = (Button) findViewById(R.id.vejledningButton);
+        vejledningButton.setOnClickListener(this);
         settingsButton.setOnClickListener(this);
         clickMeButton.setOnClickListener(this);
         webButton.setOnClickListener(this);
@@ -69,7 +69,7 @@ public class MenuScreen extends Activity implements OnClickListener {
             System.out.println("settingsButton clicked!");
             Intent intent = new Intent(this, SettingsScreen.class);
             startActivity(intent);
-        } else if(v == vejledningButtonTest){
+        } else if(v == vejledningButton){
             System.out.println("vejledningButtonTest clicked!");
             Intent intent = new Intent(this, vejledningScreen.class);
             startActivity(intent);
