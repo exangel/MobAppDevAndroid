@@ -1,7 +1,6 @@
 package com.example.exangel.mobappdevandroid;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,7 +16,7 @@ public class MenuScreen extends Activity implements OnClickListener {
     Button settingsButton;
     Button clickMeButton;
     Button webButton;
-    Button vejledningButton;
+    Button vejledningButtonTest;
     TextView menuTextView;
 
     @Override
@@ -28,8 +27,8 @@ public class MenuScreen extends Activity implements OnClickListener {
         settingsButton = (Button) findViewById(R.id.settingsButton);
         clickMeButton = (Button) findViewById(R.id.clickMeButton);
         webButton = (Button) findViewById(R.id.webButton);
-        vejledningButton = (Button) findViewById(R.id.vejledningButton);
-        vejledningButton.setOnClickListener(this);
+        vejledningButtonTest = (Button) findViewById(R.id.vejledningButton);
+        vejledningButtonTest.setOnClickListener(this);
         settingsButton.setOnClickListener(this);
         clickMeButton.setOnClickListener(this);
         webButton.setOnClickListener(this);
@@ -70,8 +69,8 @@ public class MenuScreen extends Activity implements OnClickListener {
             System.out.println("settingsButton clicked!");
             Intent intent = new Intent(this, SettingsScreen.class);
             startActivity(intent);
-        } else if(v == vejledningButton){
-            System.out.println("vejledningButton clicked!");
+        } else if(v == vejledningButtonTest){
+            System.out.println("vejledningButtonTest clicked!");
             Intent intent = new Intent(this, vejledningScreen.class);
             startActivity(intent);
         } else {
