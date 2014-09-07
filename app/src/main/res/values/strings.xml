@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MobAppDevAndroid</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings_menu">SettingsMenu</string>
+    <string name="title_activity_web_browser_menu">WebBrowserMenu</string>
+    <string name="title_activity_vejledning_screen">vejledningScreen</string>
+
+</resources>
