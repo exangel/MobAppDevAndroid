@@ -49,7 +49,11 @@ public class WebBrowserScreen extends Activity implements View.OnClickListener {
 
     public void onClick(View v){
         String url = urlText.getText().toString();
-        //Uri uri = Uri.parse(url);
+        if((!url.startsWith("http://www.") || !url.startsWith("https://www.")) && !url.startsWith("www.")){
+            url = "http://www." + url;
+        } else if( url.startsWith("www.")){
+            url = "http://" + url;
+        }
         webView.loadUrl(url);
     }
 }

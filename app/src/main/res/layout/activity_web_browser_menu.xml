@@ -32,6 +32,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:inputType="textUri" />
+        android:inputType="textUri"
+        android:hint="www."/>
 
 </RelativeLayout>
