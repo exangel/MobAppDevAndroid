@@ -22,29 +22,27 @@
         android:layout_height="wrap_content"
         android:text="Settings"
         android:id="@+id/settingsButton"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/vejledningButton"
-        android:layout_alignEnd="@+id/vejledningButton" />
+        android:layout_alignEnd="@+id/vejledningButton"
+        android:layout_below="@+id/webButton"
+        android:layout_alignParentLeft="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Web"
         android:id="@+id/webButton"
-        android:layout_above="@+id/settingsButton"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/vejledningButton"
-        android:layout_alignEnd="@+id/vejledningButton" />
+        android:layout_alignEnd="@+id/vejledningButton"
+        android:layout_below="@+id/vejledningButton"
+        android:layout_alignParentLeft="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Click me!"
         android:id="@+id/clickMeButton"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/gallowsImageView"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
@@ -53,7 +51,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
+        android:id="@+id/gallowsImageView"
         android:src="@drawable/ic_launcher"
         android:layout_alignTop="@+id/menuTextView"
         android:layout_alignRight="@+id/clickMeButton"
@@ -64,7 +62,7 @@
         android:layout_height="wrap_content"
         android:text="Vejledning"
         android:id="@+id/vejledningButton"
-        android:layout_above="@+id/webButton"
+        android:layout_below="@+id/clickMeButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -76,5 +74,16 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hangman"
+        android:id="@+id/hangmanButton"
+        android:layout_below="@+id/settingsButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/settingsButton"
+        android:layout_alignEnd="@+id/settingsButton" />
 
 </RelativeLayout>

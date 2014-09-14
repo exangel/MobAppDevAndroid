@@ -7,5 +7,6 @@
     <string name="title_activity_settings_menu">SettingsMenu</string>
     <string name="title_activity_web_browser_menu">WebBrowserMenu</string>
     <string name="title_activity_vejledning_screen">vejledningScreen</string>
+    <string name="title_activity_hangman_screen">HangmanScreen</string>
 
 </resources>
