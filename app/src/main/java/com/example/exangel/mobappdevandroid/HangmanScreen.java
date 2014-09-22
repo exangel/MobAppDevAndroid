@@ -1,7 +1,11 @@
 package com.example.exangel.mobappdevandroid;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.Preference;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -19,6 +23,7 @@ public class HangmanScreen extends Activity implements OnClickListener {
     ImageView gallowsImageView;
     EditText guessText;
     Button guessButton;
+    Button settingsButton;
     Button resetButton;
     TextView usedLettersTextView;
     TextView wordTextView;
@@ -30,12 +35,23 @@ public class HangmanScreen extends Activity implements OnClickListener {
         setContentView(R.layout.activity_hangman_screen);
 
         logic = new Galgelogik();
+
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        if(pref.getBoolean("drCheckBox",false)) {
+            try {
+                logic.hentOrdFraDr();
+            } catch (Exception e) {
+                System.out.println("Couldn't get words from DR: " + e.toString());
+            }
+        }
         gallowsImageView = (ImageView) findViewById(R.id.gallowsImageView);
         guessText = (EditText) findViewById(R.id.guessEditText);
         guessButton = (Button) findViewById(R.id.guessButton);
         guessButton.setOnClickListener(this);
         resetButton = (Button) findViewById(R.id.resetButton);
         resetButton.setOnClickListener(this);
+        settingsButton = (Button) findViewById(R.id.settingsButton);
+        settingsButton.setOnClickListener(this);
         usedLettersTextView = (TextView) findViewById(R.id.usedLettersTextView);
         wordTextView = (TextView) findViewById(R.id.wordTextView);
         endTextView = (TextView) findViewById(R.id.endTextView);
@@ -121,6 +137,10 @@ public class HangmanScreen extends Activity implements OnClickListener {
             gallowsImageView.setImageResource(R.drawable.hangman0);
             usedLettersTextView.setText("Words Used: ");
             wordTextView.setText(logic.getSynligtOrd());
+        } else if(v == settingsButton) {
+            System.out.println("hangmanSettingsButton clicked!");
+            Intent intent = new Intent(this, HangmanSettingsScreen.class);
+            startActivity(intent);
         }
 
     }

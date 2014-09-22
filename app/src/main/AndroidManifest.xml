@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MenuScreen"
+            android:name="com.example.exangel.mobappdevandroid.MenuScreen"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,20 +19,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SettingsScreen"
+            android:name="com.example.exangel.mobappdevandroid.SettingsScreen"
             android:label="@string/title_activity_settings_menu" >
         </activity>
         <activity
-            android:name=".WebBrowserScreen"
+            android:name="com.example.exangel.mobappdevandroid.WebBrowserScreen"
             android:label="@string/title_activity_web_browser_menu" >
         </activity>
         <activity
-            android:name=".vejledningScreen"
+            android:name="com.example.exangel.mobappdevandroid.vejledningScreen"
             android:label="@string/title_activity_vejledning_screen" >
         </activity>
         <activity
-            android:name=".HangmanScreen"
+            android:name="com.example.exangel.mobappdevandroid.HangmanScreen"
             android:label="@string/title_activity_hangman_screen" >
+        </activity>
+        <activity
+            android:name="com.example.exangel.mobappdevandroid.HangmanSettingsScreen"
+            android:label="@string/title_activity_hangman_settings_screen" >
         </activity>
     </application>
 
